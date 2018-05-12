@@ -19,12 +19,14 @@ class SiteForm(forms.ModelForm):
 class SiteSettingsForm(forms.ModelForm):
     class Meta:
         model = SiteSettings
-        fields = ['header_text', 'description']
+        fields = ['header_text', 'description', 'homepage_content']
         labels = {
             'header_text': pgettext_lazy(
                 'Header text', 'Header text'),
             'description': pgettext_lazy(
-                'Description', 'Description')}
+                'Description', 'Description'),
+            'homepage_content': pgettext_lazy(
+                'Home page HTML content field', 'Home page content')}
 
 
 class AuthorizationKeyForm(forms.ModelForm):

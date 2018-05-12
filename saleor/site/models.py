@@ -23,6 +23,8 @@ class SiteSettings(models.Model):
     display_gross_prices = models.BooleanField(default=True)
     charge_taxes_on_shipping = models.BooleanField(default=True)
 
+    homepage_content = models.TextField(default='', null=False, blank=True)
+
     class Meta:
         permissions = (
             ('edit_settings',
