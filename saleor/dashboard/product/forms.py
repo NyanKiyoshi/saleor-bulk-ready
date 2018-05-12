@@ -224,7 +224,6 @@ class ProductForm(forms.ModelForm, AttributesMixin):
     category = TreeNodeChoiceField(queryset=Category.objects.all())
     collections = forms.ModelMultipleChoiceField(
         required=False, queryset=Collection.objects.all())
-    description = RichTextField()
 
     model_attributes_field = 'attributes'
 

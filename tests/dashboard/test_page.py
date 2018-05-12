@@ -1,3 +1,4 @@
+import pytest
 from django.urls import reverse
 
 from saleor.dashboard.page.forms import PageForm
@@ -52,6 +53,7 @@ def test_page_delete(admin_client, page):
     assert response.status_code == 302
 
 
+@pytest.mark.skip('This feature was removed.')
 def test_sanitize_page_content(page, default_category):
     data = model_to_dict(page)
     data['content'] = (
