@@ -1,7 +1,7 @@
 from django import template
 from prices import MoneyRange, TaxedMoney, TaxedMoneyRange
 
-from ...core.utils.taxes import DEFAULT_TAX_RATE_NAME
+from ...core.utils.taxes import DEFAULT_TAX_RATE_NAME, apply_tax_to_price
 
 register = template.Library()
 
@@ -41,3 +41,16 @@ def price(context, base, display_gross=None, html=True):
 
     is_range = isinstance(base, MoneyRange)
     return {'price': base, 'is_range': is_range, 'html': html}
+
+
+@register.inclusion_tag('start_price.html', takes_context=True)
+def product_start_price(context, product):
+    taxes = context['request'].taxes
+    display_gross_prices = context['site'].settings.display_gross_prices
+
+    tax_rate_ = product.tax_rate or product.product_type.tax_rate
+    taxed_price = apply_tax_to_price(taxes, tax_rate_, product.price)
+
+    result = taxed_price.gross if display_gross_prices else taxed_price.net
+
+    return {'price': result}
