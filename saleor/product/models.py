@@ -251,6 +251,7 @@ class ProductVariant(models.Model):
 class ProductAttribute(models.Model):
     slug = models.SlugField(max_length=50, unique=True)
     name = models.CharField(max_length=100)
+    is_filter = models.BooleanField(default=True, db_index=True)
 
     class Meta:
         ordering = ('slug', )

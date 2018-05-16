@@ -387,7 +387,9 @@ class ProductAttributeForm(forms.ModelForm):
             'name': pgettext_lazy(
                 'Product display name', 'Display name'),
             'slug': pgettext_lazy(
-                'Product internal name', 'Internal name')}
+                'Product internal name', 'Internal name'),
+            'is_filter': pgettext_lazy(
+                'Should the attribute be shown as filter', 'Filterable')}
 
 
 class AttributeChoiceValueForm(forms.ModelForm):
