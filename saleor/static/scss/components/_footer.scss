@@ -35,6 +35,9 @@
       margin-right: $global-margin;
     }
   }
+  .footer-text {
+    color: lighten($gray, 12%);
+  }
 }
 
 .maincontent {

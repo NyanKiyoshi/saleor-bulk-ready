@@ -264,6 +264,14 @@
           </a>
         </div>
       </div>
+
+      {% with footer_text=site.settings.footer_text %}
+        {% if footer_text %}
+          <div class="row footer-text text-center d-block p-2 mt-4">
+            <p>{{ footer_text }}</p>
+          </div>
+        {% endif %}
+      {% endwith %}
     </div>
   </footer>
 {% endblock %}
