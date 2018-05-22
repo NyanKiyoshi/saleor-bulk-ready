@@ -79,6 +79,7 @@ SENDGRID_PASSWORD = os.environ.get('SENDGRID_PASSWORD')
 if not EMAIL_URL and SENDGRID_USERNAME and SENDGRID_PASSWORD:
     EMAIL_URL = 'smtp://%s:%s@smtp.sendgrid.net:587/?tls=True' % (
         SENDGRID_USERNAME, SENDGRID_PASSWORD)
+print(EMAIL_URL)
 email_config = dj_email_url.parse(EMAIL_URL or 'console://')
 
 EMAIL_FILE_PATH = email_config['EMAIL_FILE_PATH']
@@ -86,9 +87,16 @@ EMAIL_HOST_USER = email_config['EMAIL_HOST_USER']
 EMAIL_HOST_PASSWORD = email_config['EMAIL_HOST_PASSWORD']
 EMAIL_HOST = email_config['EMAIL_HOST']
 EMAIL_PORT = email_config['EMAIL_PORT']
-EMAIL_BACKEND = email_config['EMAIL_BACKEND']
+EMAIL_BACKEND = os.environ.get('EMAIL_BACKEND', email_config['EMAIL_BACKEND'])
 EMAIL_USE_TLS = email_config['EMAIL_USE_TLS']
 EMAIL_USE_SSL = email_config['EMAIL_USE_SSL']
+
+AWS_SES_REGION_NAME = os.environ.get('AWS_SES_REGION_NAME')
+AWS_SES_REGION_ENDPOINT = os.environ.get('AWS_SES_REGION_ENDPOINT')
+AWS_SES_CONFIGURATION_SET = os.environ.get('AWS_SES_CONFIGURATION_SET')
+
+AWS_SES_ACCESS_KEY_ID = os.environ.get('AWS_SES_ACCESS_KEY_ID')
+AWS_SES_SECRET_ACCESS_KEY = os.environ.get('AWS_SES_SECRET_ACCESS_KEY')
 
 ENABLE_SSL = ast.literal_eval(
     os.environ.get('ENABLE_SSL', 'False'))
