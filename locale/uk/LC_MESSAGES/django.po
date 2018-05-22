@@ -8,17 +8,19 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-16 08:12+0200\n"
+"POT-Creation-Date: 2018-05-22 05:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Николай Инкогнито <mmmsvit@gmail.com>, 2018\n"
+"Last-Translator: Patryk Zawadzki <patrys@room-303.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/mirumee/teams/34782/"
 "uk/)\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != "
+"11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % "
+"100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || "
+"(n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: saleor/account/forms.py:60
 msgctxt "Form field"
@@ -195,37 +197,37 @@ msgctxt "Address form"
 msgid "This value is invalid for selected country"
 msgstr "Це значення невірне для обраної країни"
 
-#: saleor/account/models.py:112
+#: saleor/account/models.py:114
 msgctxt "Permission description"
 msgid "Can view users"
 msgstr "Може переглядати користувачів"
 
-#: saleor/account/models.py:114
+#: saleor/account/models.py:116
 msgctxt "Permission description"
 msgid "Can edit users"
 msgstr "Може редагувати користувачів"
 
-#: saleor/account/models.py:116
+#: saleor/account/models.py:118
 msgctxt "Permission description"
 msgid "Can view groups"
 msgstr "Може переглядати групи"
 
-#: saleor/account/models.py:118
+#: saleor/account/models.py:120
 msgctxt "Permission description"
 msgid "Can edit groups"
 msgstr "Може редагувати групи"
 
-#: saleor/account/models.py:120
+#: saleor/account/models.py:122
 msgctxt "Permission description"
 msgid "Can view staff"
 msgstr "Може переглядати співробітників"
 
-#: saleor/account/models.py:122
+#: saleor/account/models.py:124
 msgctxt "Permission description"
 msgid "Can edit staff"
 msgstr "Може редагувати співробітників"
 
-#: saleor/account/models.py:124
+#: saleor/account/models.py:126
 msgctxt "Permission description"
 msgid "Can impersonate users"
 msgstr ""
@@ -311,6 +313,7 @@ msgid_plural "Only %d remaining in stock."
 msgstr[0] "Лише %d залишився на складі."
 msgstr[1] "Лише %d залишилося на складі."
 msgstr[2] "Лише %d залишився на складі."
+msgstr[3] "Лише %d залишився на складі."
 
 #: saleor/cart/forms.py:154
 msgctxt "Country form field label"
@@ -406,6 +409,7 @@ msgid_plural "Found %(counter)d matching records"
 msgstr[0] "Знайдено %(counter)d запис"
 msgstr[1] "Знайдено %(counter)d записів"
 msgstr[2] "Знайдено %(counter)d записів"
+msgstr[3] "Знайдено %(counter)d записів"
 
 #: saleor/core/i18n.py:5
 msgctxt "Country choice"
@@ -849,7 +853,15 @@ msgctxt "Product list sorting form"
 msgid "Sort by"
 msgstr "Сортувати по"
 
-#: saleor/product/filters.py:85
+#: saleor/product/filters.py:23
+#, fuzzy
+#| msgctxt "Cart table header"
+#| msgid "Price"
+msgctxt "Currency amount"
+msgid "Price"
+msgstr "Ціна"
+
+#: saleor/product/filters.py:86
 #, python-format
 msgctxt "Validation error for sort_by filter"
 msgid "%(value)s is not a valid sorting option"
@@ -990,12 +1002,12 @@ msgctxt "Permission description"
 msgid "Can edit shipping method"
 msgstr "Може редагувати способи доставки"
 
-#: saleor/site/models.py:32
+#: saleor/site/models.py:33
 msgctxt "Permission description"
 msgid "Can edit site settings"
 msgstr "Може редагувати налаштування сайту"
 
-#: saleor/site/models.py:35
+#: saleor/site/models.py:36
 msgctxt "Permission description"
 msgid "Can view site settings"
 msgstr "Може переглядати налаштування сайту"
@@ -1485,47 +1497,47 @@ msgctxt "Checkout page title"
 msgid "Checkout"
 msgstr "Оформити замовлення"
 
-#: templates/checkout/details.html:11
+#: templates/checkout/details.html:12
 msgctxt "Checkout top message"
 msgid "Easy and secure!"
 msgstr "Просто і безпечно!"
 
-#: templates/checkout/details.html:18
+#: templates/checkout/details.html:20
 msgctxt "Checkout title"
 msgid "Checkout"
 msgstr "Оформити замовлення"
 
-#: templates/checkout/details.html:33
+#: templates/checkout/details.html:35
 msgctxt "Order review title"
 msgid "Order review"
 msgstr "Перегляд замовлення"
 
-#: templates/checkout/details.html:49
+#: templates/checkout/details.html:51
 msgctxt "Order review section"
 msgid "Subtotal"
 msgstr "Загалом"
 
-#: templates/checkout/details.html:59
+#: templates/checkout/details.html:61
 msgctxt "Order review section"
 msgid "Shipment"
 msgstr "Відправлення "
 
-#: templates/checkout/details.html:76
+#: templates/checkout/details.html:78
 msgctxt "Order review section title"
 msgid "Taxes (included)"
 msgstr ""
 
-#: templates/checkout/details.html:78
+#: templates/checkout/details.html:80
 msgctxt "Order review section title"
 msgid "Taxes"
 msgstr ""
 
-#: templates/checkout/details.html:88
+#: templates/checkout/details.html:90
 msgctxt "Order review section title"
 msgid "Promo code"
 msgstr "Промо-код"
 
-#: templates/checkout/details.html:94
+#: templates/checkout/details.html:96
 msgctxt "Order review section title"
 msgid "Total"
 msgstr "Підсумок"
@@ -1858,8 +1870,8 @@ msgstr "Версія:"
 #: templates/dashboard/order/fulfillment.html:133
 #: templates/dashboard/product/form.html:126
 #: templates/dashboard/product/form.html:133
-#: templates/dashboard/product/product_attribute/form.html:77
-#: templates/dashboard/product/product_attribute/form.html:84
+#: templates/dashboard/product/product_attribute/form.html:80
+#: templates/dashboard/product/product_attribute/form.html:87
 #: templates/dashboard/product/product_attribute/values/form.html:78
 #: templates/dashboard/product/product_image/form.html:79
 #: templates/dashboard/product/product_type/form.html:105
@@ -1869,7 +1881,7 @@ msgstr "Версія:"
 #: templates/dashboard/shipping/form.html:78
 #: templates/dashboard/shipping/form.html:85
 #: templates/dashboard/sites/authorization_keys/form.html:71
-#: templates/dashboard/sites/form.html:58
+#: templates/dashboard/sites/form.html:61
 #: templates/dashboard/staff/detail.html:76
 #: templates/dashboard/taxes/form.html:100
 msgctxt "Dashboard cancel action"
@@ -1934,12 +1946,9 @@ msgid "Remove"
 msgstr "Видалити"
 
 #: templates/dashboard/category/detail.html:155
-#, fuzzy
-#| msgctxt "Empty list of categories"
-#| msgid "No categories"
 msgctxt "Empty list of categories"
 msgid "No subcategories"
-msgstr "Нема категорій"
+msgstr ""
 
 #: templates/dashboard/category/form.html:9
 msgctxt "Category form page title"
@@ -1977,7 +1986,7 @@ msgstr "Додати нову категорію"
 #: templates/dashboard/order/address_form.html:64
 #: templates/dashboard/order/modal/change_quantity.html:19
 #: templates/dashboard/product/product_type/form.html:109
-#: templates/dashboard/sites/form.html:61
+#: templates/dashboard/sites/form.html:64
 #: templates/dashboard/staff/detail.html:80
 #: templates/dashboard/taxes/form.html:103
 msgctxt "Dashboard update action"
@@ -1990,7 +1999,7 @@ msgstr "Оновити"
 #: templates/dashboard/menu/form.html:66
 #: templates/dashboard/menu/item/form.html:88
 #: templates/dashboard/product/form.html:136
-#: templates/dashboard/product/product_attribute/form.html:87
+#: templates/dashboard/product/product_attribute/form.html:90
 #: templates/dashboard/product/product_attribute/values/form.html:86
 #: templates/dashboard/product/product_image/form.html:87
 #: templates/dashboard/product/product_type/form.html:113
@@ -2038,6 +2047,7 @@ msgid_plural ""
 msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
+msgstr[3] ""
 
 #: templates/dashboard/category/modal/confirm_delete.html:49
 #: templates/dashboard/collection/confirm_delete.html:26
@@ -2884,7 +2894,7 @@ msgstr ""
 
 #: templates/dashboard/menu/list.html:98
 #: templates/dashboard/product/form.html:129
-#: templates/dashboard/product/product_attribute/form.html:80
+#: templates/dashboard/product/product_attribute/form.html:83
 #: templates/dashboard/product/product_attribute/values/form.html:82
 #: templates/dashboard/product/product_image/form.html:83
 #: templates/dashboard/product/product_variant/form.html:107
@@ -4179,11 +4189,9 @@ msgid "Remove"
 msgstr "Видалити"
 
 #: templates/dashboard/product/product_attribute/detail.html:108
-#, fuzzy
-#| msgid "Attribute values"
 msgctxt "Empty list of attribute values"
 msgid "No attribute values"
-msgstr "Значення атрибутів"
+msgstr ""
 
 #: templates/dashboard/product/product_attribute/form.html:8
 #: templates/dashboard/product/product_attribute/values/form.html:8
@@ -5541,8 +5549,11 @@ msgctxt "Product price filter"
 msgid "to"
 msgstr "до"
 
-#: templates/product/_filters.html:67
-msgctxt "Product price filter"
+#: templates/product/_filters.html:71
+#, fuzzy
+#| msgctxt "Dashboard update action"
+#| msgid "Update"
+msgctxt "Apply filters button"
 msgid "Update"
 msgstr "Оновити"
 
@@ -5867,13 +5878,6 @@ msgctxt "Fulfillment update email text"
 msgid "You can track your shipment with %(tracking_number)s code."
 msgstr ""
 
-#~ msgid "Color"
-#~ msgstr "Колір"
-
-#~ msgctxt "Dashboard create new action"
-#~ msgid "Create new"
-#~ msgstr "Створити новий"
-
 #~ msgctxt "Homepage title"
 #~ msgid "Promo & Sale"
 #~ msgstr "Промо і Продажі"
@@ -5897,6 +5901,10 @@ msgstr ""
 #~ msgctxt "Homepage title"
 #~ msgid "Featured products"
 #~ msgstr "Рекламовані товари"
+
+#~ msgctxt "Product price filter"
+#~ msgid "Update"
+#~ msgstr "Оновити"
 
 #~ msgctxt "Order confirmation e-mail subject"
 #~ msgid "Order details"

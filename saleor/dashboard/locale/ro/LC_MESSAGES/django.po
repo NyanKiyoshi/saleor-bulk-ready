@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-16 08:12+0200\n"
+"POT-Creation-Date: 2018-05-22 05:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Tiberiu Ichim <tiberiu.ichim@gmail.com>, 2018\n"
 "Language-Team: Romanian (https://www.transifex.com/mirumee/teams/34782/ro/)\n"
@@ -52,15 +52,15 @@ msgstr[2] "S-a găsit %(counter)d categorie potrivită"
 #: saleor/dashboard/collection/forms.py:21
 #: saleor/dashboard/discount/forms.py:77 saleor/dashboard/group/forms.py:13
 #: saleor/dashboard/product/forms.py:76 saleor/dashboard/product/forms.py:204
-#: saleor/dashboard/product/forms.py:400 saleor/dashboard/shipping/forms.py:14
-#: saleor/dashboard/sites/forms.py:42
+#: saleor/dashboard/product/forms.py:402 saleor/dashboard/shipping/forms.py:14
+#: saleor/dashboard/sites/forms.py:45
 msgctxt "Item name"
 msgid "Name"
 msgstr "Nume"
 
 #: saleor/dashboard/category/forms.py:25 saleor/dashboard/product/forms.py:205
 #: saleor/dashboard/product/forms.py:349 saleor/dashboard/shipping/forms.py:16
-#: saleor/dashboard/sites/forms.py:27
+#: saleor/dashboard/sites/forms.py:28
 msgctxt "Description"
 msgid "Description"
 msgstr "Descriere"
@@ -152,7 +152,7 @@ msgstr "Publicat"
 #: saleor/dashboard/collection/views.py:41
 msgctxt "Collection message"
 msgid "Added collection"
-msgstr "Colecție agăugată"
+msgstr "Colecție adăugată"
 
 #: saleor/dashboard/collection/views.py:56
 msgctxt "Collection message"
@@ -1461,7 +1461,7 @@ msgctxt "Currency amount"
 msgid "Cost net price"
 msgstr ""
 
-#: saleor/dashboard/product/forms.py:347 saleor/dashboard/product/forms.py:452
+#: saleor/dashboard/product/forms.py:347 saleor/dashboard/product/forms.py:454
 msgctxt "Product image"
 msgid "Image"
 msgstr "Imagine"
@@ -1475,6 +1475,11 @@ msgstr "Numele afișat"
 msgctxt "Product internal name"
 msgid "Internal name"
 msgstr "Nume intern"
+
+#: saleor/dashboard/product/forms.py:392
+msgctxt "Should the attribute be shown as filter"
+msgid "Filterable"
+msgstr ""
 
 #: saleor/dashboard/product/views.py:123
 #, python-format
@@ -1666,22 +1671,27 @@ msgctxt "Display name"
 msgid "Display name"
 msgstr "Numele afișat"
 
-#: saleor/dashboard/sites/forms.py:25
+#: saleor/dashboard/sites/forms.py:26
 msgctxt "Header text"
 msgid "Header text"
 msgstr "Antet"
 
-#: saleor/dashboard/sites/forms.py:29
+#: saleor/dashboard/sites/forms.py:30
+msgctxt "Site Settings Forms - Footer Text label"
+msgid "Footer Text"
+msgstr ""
+
+#: saleor/dashboard/sites/forms.py:32
 msgctxt "Home page HTML content field"
 msgid "Home page content"
 msgstr ""
 
-#: saleor/dashboard/sites/forms.py:38
+#: saleor/dashboard/sites/forms.py:41
 msgctxt "Key for chosen authorization method"
 msgid "Key"
 msgstr "Cheie"
 
-#: saleor/dashboard/sites/forms.py:40
+#: saleor/dashboard/sites/forms.py:43
 msgctxt "Password"
 msgid "Password"
 msgstr "Parolă"
@@ -1829,7 +1839,3 @@ msgstr "Din"
 msgctxt "Label of second value in range filter"
 msgid "To"
 msgstr "La"
-
-#~ msgctxt "Color"
-#~ msgid "Color"
-#~ msgstr "Culoare"

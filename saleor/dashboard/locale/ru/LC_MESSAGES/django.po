@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-16 08:12+0200\n"
+"POT-Creation-Date: 2018-05-22 05:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: danSamara <dan.samara@gmail.com>, 2018\n"
 "Language-Team: Russian (https://www.transifex.com/mirumee/teams/34782/ru/)\n"
@@ -54,15 +54,15 @@ msgstr[3] "Найдено %(counter)d категории"
 #: saleor/dashboard/collection/forms.py:21
 #: saleor/dashboard/discount/forms.py:77 saleor/dashboard/group/forms.py:13
 #: saleor/dashboard/product/forms.py:76 saleor/dashboard/product/forms.py:204
-#: saleor/dashboard/product/forms.py:400 saleor/dashboard/shipping/forms.py:14
-#: saleor/dashboard/sites/forms.py:42
+#: saleor/dashboard/product/forms.py:402 saleor/dashboard/shipping/forms.py:14
+#: saleor/dashboard/sites/forms.py:45
 msgctxt "Item name"
 msgid "Name"
 msgstr "Название"
 
 #: saleor/dashboard/category/forms.py:25 saleor/dashboard/product/forms.py:205
 #: saleor/dashboard/product/forms.py:349 saleor/dashboard/shipping/forms.py:16
-#: saleor/dashboard/sites/forms.py:27
+#: saleor/dashboard/sites/forms.py:28
 msgctxt "Description"
 msgid "Description"
 msgstr "Описание"
@@ -1468,7 +1468,7 @@ msgctxt "Currency amount"
 msgid "Cost net price"
 msgstr ""
 
-#: saleor/dashboard/product/forms.py:347 saleor/dashboard/product/forms.py:452
+#: saleor/dashboard/product/forms.py:347 saleor/dashboard/product/forms.py:454
 msgctxt "Product image"
 msgid "Image"
 msgstr ""
@@ -1481,6 +1481,11 @@ msgstr ""
 #: saleor/dashboard/product/forms.py:390
 msgctxt "Product internal name"
 msgid "Internal name"
+msgstr ""
+
+#: saleor/dashboard/product/forms.py:392
+msgctxt "Should the attribute be shown as filter"
+msgid "Filterable"
 msgstr ""
 
 #: saleor/dashboard/product/views.py:123
@@ -1675,22 +1680,27 @@ msgctxt "Display name"
 msgid "Display name"
 msgstr ""
 
-#: saleor/dashboard/sites/forms.py:25
+#: saleor/dashboard/sites/forms.py:26
 msgctxt "Header text"
 msgid "Header text"
 msgstr ""
 
-#: saleor/dashboard/sites/forms.py:29
+#: saleor/dashboard/sites/forms.py:30
+msgctxt "Site Settings Forms - Footer Text label"
+msgid "Footer Text"
+msgstr ""
+
+#: saleor/dashboard/sites/forms.py:32
 msgctxt "Home page HTML content field"
 msgid "Home page content"
 msgstr ""
 
-#: saleor/dashboard/sites/forms.py:38
+#: saleor/dashboard/sites/forms.py:41
 msgctxt "Key for chosen authorization method"
 msgid "Key"
 msgstr ""
 
-#: saleor/dashboard/sites/forms.py:40
+#: saleor/dashboard/sites/forms.py:43
 msgctxt "Password"
 msgid "Password"
 msgstr ""
