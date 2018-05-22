@@ -2,20 +2,20 @@
 # Copyright (C) 2017 Mirumee Software
 # This file is distributed under the same license as the Saleor package.
 # Mirumee Software <hello@mirumee.com>, 2017.
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: master\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-05-10 08:29-0500\n"
+"POT-Creation-Date: 2018-05-22 05:43-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Da Costa Faro Rémy <remy@dacostafaro.com>, 2018\n"
 "Language-Team: French (https://www.transifex.com/mirumee/teams/34782/fr/)\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: saleor/dashboard/category/filters.py:8
@@ -50,15 +50,15 @@ msgstr[1] "%(counter)d catégories correspondantes trouvées"
 #: saleor/dashboard/collection/forms.py:21
 #: saleor/dashboard/discount/forms.py:77 saleor/dashboard/group/forms.py:13
 #: saleor/dashboard/product/forms.py:76 saleor/dashboard/product/forms.py:204
-#: saleor/dashboard/product/forms.py:401 saleor/dashboard/shipping/forms.py:14
-#: saleor/dashboard/sites/forms.py:40
+#: saleor/dashboard/product/forms.py:402 saleor/dashboard/shipping/forms.py:14
+#: saleor/dashboard/sites/forms.py:45
 msgctxt "Item name"
 msgid "Name"
 msgstr "Nom"
 
 #: saleor/dashboard/category/forms.py:25 saleor/dashboard/product/forms.py:205
-#: saleor/dashboard/product/forms.py:350 saleor/dashboard/shipping/forms.py:16
-#: saleor/dashboard/sites/forms.py:27
+#: saleor/dashboard/product/forms.py:349 saleor/dashboard/shipping/forms.py:16
+#: saleor/dashboard/sites/forms.py:28
 msgctxt "Description"
 msgid "Description"
 msgstr "Description"
@@ -111,9 +111,8 @@ msgstr "Est publié"
 #: saleor/dashboard/collection/filters.py:23
 #: saleor/dashboard/customer/filters.py:38
 #: saleor/dashboard/discount/filters.py:43
-#: saleor/dashboard/discount/filters.py:74
-#: saleor/dashboard/order/filters.py:43 saleor/dashboard/order/filters.py:49
-#: saleor/dashboard/product/filters.py:49
+#: saleor/dashboard/discount/filters.py:74 saleor/dashboard/order/filters.py:43
+#: saleor/dashboard/order/filters.py:49 saleor/dashboard/product/filters.py:49
 #: saleor/dashboard/product/filters.py:55 saleor/dashboard/taxes/filters.py:25
 msgctxt "Filter empty choice label"
 msgid "All"
@@ -162,20 +161,17 @@ msgctxt "Collection message"
 msgid "Deleted collection"
 msgstr "Collection supprimée"
 
-#: saleor/dashboard/customer/filters.py:17
-#: saleor/dashboard/staff/filters.py:15
+#: saleor/dashboard/customer/filters.py:17 saleor/dashboard/staff/filters.py:15
 msgctxt "Customer list sorting option"
 msgid "email"
 msgstr "courriel"
 
-#: saleor/dashboard/customer/filters.py:19
-#: saleor/dashboard/staff/filters.py:17
+#: saleor/dashboard/customer/filters.py:19 saleor/dashboard/staff/filters.py:17
 msgctxt "Customer list sorting option"
 msgid "name"
 msgstr "nom"
 
-#: saleor/dashboard/customer/filters.py:21
-#: saleor/dashboard/staff/filters.py:19
+#: saleor/dashboard/customer/filters.py:21 saleor/dashboard/staff/filters.py:19
 msgctxt "Customer list sorting option"
 msgid "location"
 msgstr "lieu"
@@ -455,8 +451,7 @@ msgctxt "Product"
 msgid "Product"
 msgstr "Produit"
 
-#: saleor/dashboard/discount/forms.py:215
-#: saleor/dashboard/product/forms.py:208
+#: saleor/dashboard/discount/forms.py:215 saleor/dashboard/product/forms.py:208
 msgctxt "Category"
 msgid "Category"
 msgstr "Catégorie"
@@ -493,8 +488,7 @@ msgctxt "Voucher message"
 msgid "Removed voucher %s"
 msgstr "Bon d'achat supprimé %s"
 
-#: saleor/dashboard/group/filters.py:10
-#: saleor/dashboard/shipping/filters.py:10
+#: saleor/dashboard/group/filters.py:10 saleor/dashboard/shipping/filters.py:10
 msgctxt "Group list sorting option"
 msgid "name"
 msgstr "nom"
@@ -624,8 +618,8 @@ msgstr "L'imbrication maximale des menus est de 2 objets."
 msgctxt "Menu item form error"
 msgid "A single menu item can't point to both an internal link and URL."
 msgstr ""
-"Un élément unique du menu ne peut pas pointer à la fois vers un lien interne"
-" et une URL."
+"Un élément unique du menu ne peut pas pointer à la fois vers un lien interne "
+"et une URL."
 
 #: saleor/dashboard/menu/forms.py:91
 msgctxt "Menu item form error"
@@ -1127,11 +1121,10 @@ msgstr "Expédition #%(fulfillment)s annulé"
 #, python-format
 msgctxt "Dashboard message"
 msgid ""
-"Fulfillment #%(fulfillment)s tracking number changed to: "
-"#%(tracking_number)s"
+"Fulfillment #%(fulfillment)s tracking number changed to: #%(tracking_number)s"
 msgstr ""
-"Le code de suivi de l'expédition #%(fulfillment)s à été changé en: "
-"#%(tracking_number)s"
+"Le code de suivi de l'expédition #%(fulfillment)s à été changé en: #"
+"%(tracking_number)s"
 
 #: saleor/dashboard/order/views.py:696
 #, python-format
@@ -1412,70 +1405,75 @@ msgctxt "Product tax rate type"
 msgid "Tax rate"
 msgstr "Taux de TVA"
 
-#: saleor/dashboard/product/forms.py:249
+#: saleor/dashboard/product/forms.py:248
 msgctxt "Currency gross amount"
 msgid "Gross price"
 msgstr "Prix brut"
 
-#: saleor/dashboard/product/forms.py:252
+#: saleor/dashboard/product/forms.py:251
 msgctxt "Currency net amount"
 msgid "Net price"
 msgstr "Prix net"
 
-#: saleor/dashboard/product/forms.py:278
+#: saleor/dashboard/product/forms.py:277
 msgctxt "SKU"
 msgid "SKU"
 msgstr "Référence"
 
-#: saleor/dashboard/product/forms.py:280
+#: saleor/dashboard/product/forms.py:279
 msgctxt "Override price"
 msgid "Selling price override"
 msgstr "Substitution du prix de vente"
 
-#: saleor/dashboard/product/forms.py:281
+#: saleor/dashboard/product/forms.py:280
 msgctxt "Integer number"
 msgid "Number in stock"
 msgstr "Quantité en stock"
 
-#: saleor/dashboard/product/forms.py:282
+#: saleor/dashboard/product/forms.py:281
 msgctxt "Currency amount"
 msgid "Cost price"
 msgstr "Coût de revient"
 
-#: saleor/dashboard/product/forms.py:297
+#: saleor/dashboard/product/forms.py:296
 msgctxt "Override price"
 msgid "Selling gross price override"
 msgstr "Substitution du prix de vente brut"
 
-#: saleor/dashboard/product/forms.py:299
+#: saleor/dashboard/product/forms.py:298
 msgctxt "Currency amount"
 msgid "Cost gross price"
 msgstr "Coût brut"
 
-#: saleor/dashboard/product/forms.py:302
+#: saleor/dashboard/product/forms.py:301
 msgctxt "Override price"
 msgid "Selling net price override"
 msgstr "Substitution du prix net"
 
-#: saleor/dashboard/product/forms.py:304
+#: saleor/dashboard/product/forms.py:303
 msgctxt "Currency amount"
 msgid "Cost net price"
 msgstr "Coût net"
 
-#: saleor/dashboard/product/forms.py:348 saleor/dashboard/product/forms.py:453
+#: saleor/dashboard/product/forms.py:347 saleor/dashboard/product/forms.py:454
 msgctxt "Product image"
 msgid "Image"
 msgstr "Photo"
 
-#: saleor/dashboard/product/forms.py:389
+#: saleor/dashboard/product/forms.py:388
 msgctxt "Product display name"
 msgid "Display name"
 msgstr "Nom d'affichage"
 
-#: saleor/dashboard/product/forms.py:391
+#: saleor/dashboard/product/forms.py:390
 msgctxt "Product internal name"
 msgid "Internal name"
 msgstr "Nom interne"
+
+#: saleor/dashboard/product/forms.py:392
+msgctxt "Should the attribute be shown as filter"
+msgid "Filterable"
+msgstr ""
 
 #: saleor/dashboard/product/views.py:123
 #, python-format
@@ -1666,17 +1664,27 @@ msgctxt "Display name"
 msgid "Display name"
 msgstr "Nom d'affichage"
 
-#: saleor/dashboard/sites/forms.py:25
+#: saleor/dashboard/sites/forms.py:26
 msgctxt "Header text"
 msgid "Header text"
 msgstr "Texte d'en-tête"
 
-#: saleor/dashboard/sites/forms.py:36
+#: saleor/dashboard/sites/forms.py:30
+msgctxt "Site Settings Forms - Footer Text label"
+msgid "Footer Text"
+msgstr ""
+
+#: saleor/dashboard/sites/forms.py:32
+msgctxt "Home page HTML content field"
+msgid "Home page content"
+msgstr ""
+
+#: saleor/dashboard/sites/forms.py:41
 msgctxt "Key for chosen authorization method"
 msgid "Key"
 msgstr "Clé"
 
-#: saleor/dashboard/sites/forms.py:38
+#: saleor/dashboard/sites/forms.py:43
 msgctxt "Password"
 msgid "Password"
 msgstr "Mot de passe"
@@ -1805,8 +1813,7 @@ msgstr "Les taux de TVA ont été mis à jour avec succès"
 
 #: saleor/dashboard/taxes/views.py:69
 msgctxt "Dashboard message"
-msgid ""
-"Could not fetch tax rates. You have not supplied a valid API Access Key"
+msgid "Could not fetch tax rates. You have not supplied a valid API Access Key"
 msgstr ""
 "Impossible de chercher les taux de TVA. Vous n'avez pas fournis une clé API "
 "correcte"
