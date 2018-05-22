@@ -1,0 +1,8 @@
+{% load i18n %}
+{% load amount from prices_i18n %}
+
+{% blocktrans trimmed context 'Product start price' with price=price|amount %}
+  <span class="small">From</span><br/>
+  <strong>{{ price }}</strong><br/>
+  <span class="small">per unit</span>
+{% endblocktrans %}

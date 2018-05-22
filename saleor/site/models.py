@@ -12,6 +12,7 @@ class SiteSettings(models.Model):
     site = models.OneToOneField(
         Site, related_name='settings', on_delete=models.CASCADE)
     header_text = models.CharField(max_length=200, blank=True)
+    footer_text = models.CharField(max_length=800, blank=True, null=True)
     description = models.CharField(max_length=500, blank=True)
     top_menu = models.ForeignKey(
         'menu.Menu', on_delete=models.SET_NULL, related_name='+', blank=True,
@@ -22,6 +23,8 @@ class SiteSettings(models.Model):
     include_taxes_in_prices = models.BooleanField(default=True)
     display_gross_prices = models.BooleanField(default=True)
     charge_taxes_on_shipping = models.BooleanField(default=True)
+
+    homepage_content = models.TextField(default='', null=False, blank=True)
 
     class Meta:
         permissions = (

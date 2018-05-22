@@ -15,6 +15,7 @@ def test_get_email_context(order, site_settings):
     proper_context = {
         'protocol': 'https' if settings.ENABLE_SSL else 'http',
         'site_name': site.name,
+        'footer_text': site_settings.footer_text,
         'domain': site.domain,
         'url': order_url}
 
@@ -59,8 +60,15 @@ def test_collect_data_for_email(order):
     (emails.send_payment_confirmation, emails.CONFIRM_PAYMENT_TEMPLATE),
     (emails.send_note_confirmation, emails.CONFIRM_NOTE_TEMPLATE),
     (emails.send_order_confirmation, emails.CONFIRM_ORDER_TEMPLATE)])
+@pytest.mark.parametrize('footer_text', ('', 'This is the footer text.'))
 @mock.patch('saleor.order.emails.send_templated_mail')
-def test_send_emails(mocked_templated_email, order, template, send_email):
+def test_send_emails(
+        mocked_templated_email, order, site_settings,
+        template, send_email, footer_text):
+
+    site_settings.footer_text = footer_text
+    site_settings.save()
+
     send_email(order.pk)
     email_data = emails.collect_data_for_email(order.pk, template)
     mocked_templated_email.assert_called_once_with(

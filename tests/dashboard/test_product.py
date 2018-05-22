@@ -2,6 +2,7 @@ import json
 from io import BytesIO
 from unittest.mock import MagicMock, Mock
 
+import pytest
 from django.conf import settings
 from django.core.files.uploadedfile import SimpleUploadedFile
 from django.forms import HiddenInput
@@ -1041,6 +1042,7 @@ def test_product_form_assign_collection_to_product(product):
     assert collection.products.first().name == product.name
 
 
+@pytest.mark.skip('This feature was removed.')
 def test_product_form_sanitize_product_description(
         product_type, default_category):
     product = Product.objects.create(

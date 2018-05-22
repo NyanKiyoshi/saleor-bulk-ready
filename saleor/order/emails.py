@@ -23,6 +23,7 @@ def get_email_context(order_token):
     ctx = {
         'protocol': 'https' if settings.ENABLE_SSL else 'http',
         'site_name': site.name,
+        'footer_text': site.settings.footer_text,
         'domain': site.domain,
         'url': order_url}
     return ctx

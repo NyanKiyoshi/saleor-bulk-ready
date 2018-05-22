@@ -10,6 +10,8 @@ from saleor.cart import CartStatus, utils
 from saleor.cart.models import Cart
 from saleor.discount.models import Sale
 from saleor.product import ProductAvailabilityStatus, models
+from saleor.product.filters import ProductCategoryFilter
+from saleor.product.models import ProductAttribute, Product
 from saleor.product.thumbnails import create_product_thumbnails
 from saleor.product.utils import (
     allocate_stock, deallocate_stock, decrease_stock, increase_stock)
@@ -97,6 +99,42 @@ def test_filtering_by_attribute(db, color_attribute, default_category):
                                             color_attribute.pk, color_2.pk)
     assert product_a in list(filtered)
     assert product_b not in list(filtered)
+
+
+def test_get_attributes(product, color_attribute, default_category):
+    assert color_attribute.is_filter
+
+    filter_instance = ProductCategoryFilter(
+        data={}, queryset=Product.objects.get_queryset(),
+        category=default_category)
+    product_attributes, variant_attributes = filter_instance._get_attributes()
+
+    assert len(product_attributes) == 1
+    assert len(variant_attributes) == 1
+
+    # create a new attribute that is a filter attribute as well
+    new_attr = ProductAttribute.objects.create(
+        name='Test Attr', slug='test-attr', is_filter=True)
+
+    # add this new attribute to the product type
+    product.product_type.product_attributes.add(new_attr)
+
+    # retrieve the attributes, the newly created attribute should be there
+    product_attributes, variant_attributes = filter_instance._get_attributes()
+    assert len(product_attributes) == 2
+    assert len(variant_attributes) == 1
+
+    # set the new attribute as a non filter attribute
+    new_attr.is_filter = False
+    new_attr.save()
+
+    # retrieve the attributes, the attribute should be gone
+    product_attributes, variant_attributes = filter_instance._get_attributes()
+    assert len(product_attributes) == 1
+    assert len(variant_attributes) == 1
+
+    # make sure this is the color_attribute that is being shown, as we expect
+    assert product_attributes.last().pk == color_attribute.pk
 
 
 def test_render_home_page(client, product):

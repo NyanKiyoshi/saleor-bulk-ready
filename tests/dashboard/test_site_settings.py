@@ -29,13 +29,17 @@ def test_site_form():
 
 
 def test_site_settings_form(site_settings):
-    data = {'header_text': 'mirumee', 'description': 'mirumee.com'}
+    data = {
+        'header_text': 'mirumee',
+        'description': 'mirumee.com',
+        'footer_text': 'hello footer'}
     form = SiteSettingsForm(data, instance=site_settings)
     assert form.is_valid()
 
     site = form.save()
     assert site.header_text == 'mirumee'
     assert smart_text(site) == 'mirumee.com'
+    assert site.footer_text == 'hello footer'
 
     form = SiteSettingsForm({})
     assert form.is_valid()

@@ -16,6 +16,13 @@
     </mj-text>
   </mj-column>
 </mj-section>
+<mj-section>
+  <mj-column>
+    <mj-text align="center" color="#999" line-height="1.4" font-size=".7rem">
+      {% if footer_text %}{{ footer_text }}{% endif %}
+    </mj-text>
+  </mj-column>
+</mj-section>
 <mj-section css-class="no-display">
   <mj-column>
     <mj-text>

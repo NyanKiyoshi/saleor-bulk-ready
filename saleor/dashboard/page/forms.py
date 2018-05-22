@@ -31,8 +31,6 @@ class PageForm(forms.ModelForm):
                 'Form field help text',
                 'Slug is being used to create page URL')}
 
-    content = RichTextField()
-
     def clean_slug(self):
         # Make sure slug is not being written to database with uppercase.
         slug = self.cleaned_data.get('slug')
